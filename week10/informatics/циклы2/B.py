@@ -1,9 +1,9 @@
 a = int(input())
-i = 1
+i = 2	
 
 while i > 0:
-	if i * i <= a:
-		print(i * i)
-	else:
+	if a % i == 0:
+		print(i)
 		break
+		
 	i = i + 1
