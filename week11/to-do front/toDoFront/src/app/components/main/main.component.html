@@ -8,16 +8,16 @@
 					</h2>
 					<div class="form_block">
 						<form action="#">
-							<input type="text" placeholder="New Task" class="form_input" id="form_input">
-							<button type="submit" class="form_btn" onclick="create_div();">Add</button>
+							<input type="text" placeholder="New Task" class="form_input" id="form_input" #formInput>
+							<button type="button" class="form_btn" (click)="CreateDiv()">Add</button>
 						</form>	
-						<p class="counter" id="counter">1</p>			
+						<p class="counter" id="counter" #counting>1</p>			
 					</div>
 				</div>
 
-				<div class="content_block main_block" id="content_block">
+				<div class="content_block main_block" id="content_block" #contBlock>
 					<div class="line"></div>
-					<div class="note_block" id="note_block"><div class="left_side"><input type="checkbox" class="checkbox" id="ch" onclick="done_note();"><p class="note_title" id="par">madik</p>
+					<div class="note_block" id="note_block" #noteBlock><div class="left_side"><input type="checkbox" class="checkbox" id="ch" onclick="done_note();"><p class="note_title" id="par">madik</p>
 						</div><div class="right_side d-flex"><p class="date_title">date</p>
 							<a href="#" onclick="delete_div();">
 								<i class="fas fa-trash-alt"></i>
