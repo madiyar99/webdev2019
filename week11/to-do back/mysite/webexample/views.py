@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from shop.models import Category
 # Create your views here.
 
 def index(request):
@@ -17,4 +18,12 @@ def current_time(request):
 
 def show_product(request, pk):
 	return HttpResponse('<h1>{}</h1>'.format(pk))
+
+def category_list(request):
+	categories = Category.objects.all()
+	context = {
+		'categories': categories
+	}
+	return render(request, 'category.html', context)
+
 
