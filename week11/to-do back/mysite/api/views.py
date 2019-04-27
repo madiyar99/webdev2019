@@ -24,7 +24,7 @@ def tasks(request, pk):
     except TaskList.DoesNotExist as e:
         return JsonResponse({'error': str(e)})
 
-    tasks = Task.tasks_set.all()
+    tasks = task_list.task_set.all()
     json_task = [t.to_json() for t in tasks]
     return JsonResponse(json_task, safe=False)
 
